@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <script src="https://www.youtube.com/iframe_api"></script>
+
     <!-- Título da Página -->
     <title>Chat Lucrativo</title>
 
@@ -31,24 +33,7 @@
       min-height: 100%;
       }
 
-      @media (max-width: 768px) {
-        .video-player {
-          width: 100%;
-          background: 0 0;
-        }
-        .video-player iframe {
-          width: 100%;
-          height: 100%;
-          top: 0;
-          margin: auto;
-        }
-        #frame {
-          width: 100%;
-          height: 100%;
-          top: 0;
-          margin: auto;
-        }
-      }
+      
 
       @media (max-width: 768px) {
         .video-player {
@@ -57,7 +42,7 @@
       }
 
       .container{
-        max-width: 900px!important;
+        max-width: 1000px!important;
       }
 
       .a-btn {
@@ -220,11 +205,14 @@
         padding-top: 10px;
       }
 
-      @media (max-width: 450px){
-        .videos iframe{
-          width: 100%!important;
-          height: 200px!important;
-        }
+    
+
+      .videos img{
+        cursor: pointer;
+      }
+
+      .videos div{
+        display: inline;
       }
 
       .benef {
@@ -263,7 +251,7 @@
         <img style="width: 100%" src="img/som.webp">
 
         <!-- Botão -->
-        <div id="cta1" class="delay mt-4">
+        <div id="cta1" class="mt-4">
           <a href="https://elchatprospera.online/sf/?sfunnel=18" class="a-btn" style="text-decoration: none;">
             <span class="span-btn">QUERO TER ACESSO AO CHAT LUCRATIVO!</span>
           </a>
@@ -271,13 +259,28 @@
 
           <img src="img/HL-BTN.webp" style="width: 100%; margin-top: 50px;">
 
-          <div style="text-align: center" class="videos">            
+          <div class="videos" style="text-align: center;">
+            <div id="imagem1" onclick="carregarVideo1()">
+              <img src="img/thumb1.png" alt="Imagem" width="280" height="164">
+            </div>
+
+            <div id="imagem2" onclick="carregarVideo2()">
+              <img src="img/thumb2.png" alt="Imagem" width="280" height="164">
+            </div>
+
+            <div id="imagem3" onclick="carregarVideo3()">
+              <img src="img/thumb3.png" alt="Imagem" width="280" height="164">
+            </div>
+
+          </div>
+
+          <!--       
             <span><iframe width="280" height="164" src="https://www.youtube.com/embed/_j5EzkLA93I" title="1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
 
             <span><iframe width="280" height="164" src="https://www.youtube.com/embed/NWvtcMn31pQ" title="2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
 
             <span><iframe width="280" height="164" src="https://www.youtube.com/embed/8cw3r6R1LE0" title="3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
-          </div>
+          -->
 
           <a href="https://elchatprospera.online/sf/?sfunnel=18" class="a-btn" style="text-decoration: none; margin: 20px 0px;">
             <span class="span-btn">QUERO TER ACESSO AO CHAT LUCRATIVO!</span>
@@ -490,6 +493,46 @@
         }, 100)
     }
 
+  </script>
+  <script>
+      function carregarVideo1() {
+      // Defina o ID do vídeo do YouTube que deseja carregar
+      var videoID = "_j5EzkLA93I";
+
+      // Crie o objeto do player do YouTube
+      var player = new YT.Player("imagem1", {
+        height: "164",
+        width: "280",
+        videoId: videoID,
+        playerVars: { 'autoplay': 1 },
+      });
+      }
+
+      function carregarVideo2() {
+      // Defina o ID do vídeo do YouTube que deseja carregar
+      var videoID = "NWvtcMn31pQ";
+
+      // Crie o objeto do player do YouTube
+      var player = new YT.Player("imagem2", {
+        height: "164",
+        width: "280",
+        videoId: videoID,
+        playerVars: { 'autoplay': 1 },
+      });
+      }
+
+      function carregarVideo3() {
+      // Defina o ID do vídeo do YouTube que deseja carregar
+      var videoID = "8cw3r6R1LE0";
+
+      // Crie o objeto do player do YouTube
+      var player = new YT.Player("imagem3", {
+        height: "164",
+        width: "280",
+        videoId: videoID,
+        playerVars: { 'autoplay': 1 },
+      });
+      }
   </script>
 
   </body>
