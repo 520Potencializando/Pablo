@@ -5,13 +5,6 @@
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="preload" href="https://scripts.converteai.net/3f73cced-1612-466b-ac92-0b7e1f83ce95/players/6405ff02ae814600091965e0/player.js" as="script">
-    <link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
-    <link rel="preload" href="https://images.converteai.net/3f73cced-1612-466b-ac92-0b7e1f83ce95/players/6405ff02ae814600091965e0/thumbnail.jpg" as="image">
-    <link rel="preload" href="https://cdn.converteai.net/3f73cced-1612-466b-ac92-0b7e1f83ce95/6405fcd12b2cc8000b513f81/playlist.m3u8" as="fetch">
-    <link rel="dns-prefetch" href="https://cdn.converteai.net">
-    <link rel="dns-prefetch" href="https://scripts.converteai.net">
-    <link rel="dns-prefetch" href="https://images.converteai.net">
     <link rel="dns-prefetch" href="https://api.vturb.com.br">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -21,218 +14,7 @@
 
     <!-- Título da Página -->
     <title>Chat Lucrativo</title>
-
-    <style>
-      .delay{
-        display:none;
-      }
-
-      body {
-      font-size: 16px;
-      background-color: #fff;
-      min-height: 100%;
-      }
-
-      
-
-      @media (max-width: 768px) {
-        .video-player {
-          margin-top: 0 !important;
-        }
-      }
-
-      .container{
-        max-width: 1000px!important;
-      }
-
-      .a-btn {
-        text-decoration: none;
-        -webkit-font-smoothing: antialiased;
-        margin: 0;
-        border: 0; 
-        font: inherit; 
-        vertical-align: baseline;
-        color: #2e82bc; 
-        outline: 0; 
-        line-height: 1; 
-        text-align: center; 
-        position:relative!important; display: inline-block!important;
-        border-style: solid; 
-        width: 100%; padding-left: 0!important; padding-right: 0!important; 
-        margin-bottom: 10px; 
-        padding: 30px 44px; 
-        border-color: #ff5535; 
-        border-width: 0px; 
-        border-radius: 50px; 
-        background: linear-gradient(to bottom, #00e708 0%, #1c6e00 100%);
-        box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5); 
-        text-decoration: none!important;
-        cursor: pointer;
-
-         animation: pulse 1.5s infinite alternate;
-        animation-name: pulse;
-        -webkit-animation-name: pulse;
-        animation-duration: 1.5s;
-        -webkit-animation-duration: 1.5s;
-        animation-iteration-count: infinite;
-        -webkit-animation-iteration-count: infinite;
-        text-decoration: none;
-      }
-
-      @keyframes pulse{
-        0%,100%{transform:scale(.9);opacity:.9;}
-        50%{transform:scale(1);opacity:1;}
-        }
-        @-webkit-keyframes pulse{
-        0%,100%{-webkit-transform:scale(.95);opacity:.7}
-        50%{-webkit-transform:scale(1);opacity:1}
-      }
-
-      .a-btn:hover {
-          background: #00e708;
-          color: #fff;
-          box-shadow: 0 0 5px #3dff44f5, 0 0 25px #3dff44f5, 0 0 50px #3dff44f5, 0 0 100px #3dff44f5;
-      }
-
-      .span-btn {
-        text-decoration: none;
-        -webkit-font-smoothing: antialiased; 
-        text-align: center;
-        margin: 0; 
-        border: 0; 
-        font: inherit;
-        vertical-align: baseline;
-        display: block; 
-        position: relative; 
-        z-index: 1; 
-        padding: 0 15px; 
-        white-space: normal; 
-        font-size: 20px;
-        color: #ffffff; 
-        font-family: Oswald; 
-        font-weight: bold; 
-        text-shadow: #000000 0px 1px 0px;
-        text-decoration: none;
-      }
-      
-      .som{
-        width: 100%;
-      }
-
-      .last-pg{
-        background-color: black;
-        width: 100%;
-        height: 100%;
-        padding-bottom: 5px;
-        padding-top: 10px;
-      }
-
-      .modal{
-        background-color: white;
-        border-radius: 20px;
-        margin: 50px auto;
-        overflow:auto; 
-        max-width: 500px;
-        z-index: 10000000;
-        padding: 10px;
-        color: #646464;
-      }
-
-      .close-modal{
-          cursor: pointer;
-          border: none;
-          width: 40px;
-          height: 40px;
-          border-radius: 50px;
-      }
-
-      .modal::-webkit-scrollbar {
-          width: 6px;
-      }
-
-      .modal-footer button{
-        margin: 0 auto;
-        border: none;
-        padding: 10px 40px;
-      }
-
-      .dim {
-        /* For Internet Explorer */
-        box-shadow: 0 0 0 1000px rgba(0, 0, 0, .6);
-          
-        /* For other browsers */
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .6);
-      }
-
-      .footer p{
-        font-weight: 100;
-        font-size: 12px;
-        margin: 20px auto;
-        padding: 2px 28px;
-        text-align: center;
-        margin-bottom: 1rem;
-        color: #787878;
-        max-width: 800px;
-        padding-top: 20px;
-      }
-
-      .texto-branco{
-        color: #fff;
-      }
-
-      .som{
-        width: 100%;
-      }
-
-      .line-fb{
-        border: 1px solid #dadada;
-        width: 100%;
-        display: block;
-        margin-bottom: 15px;
-      }
-
-      .plugin-facebook-text {
-          font-size: 12px;
-          line-height: 16px;
-          color: #2078F4;
-        }
-
-      .last-pg{
-        background-color: black;
-        width: 100%;
-        height: 100%;
-        padding-bottom: 5px;
-        padding-top: 10px;
-      }
-
-    
-
-      .videos img{
-        cursor: pointer;
-      }
-
-      .videos div{
-        display: inline;
-      }
-
-      .benef {
-        margin-top: 50px;
-      }
-
-      .benef span{
-        width: 100%;
-        padding: 25px 0px;
-        background-color: #04A281;
-        display: block;
-        color: #fff;
-        font-size: 30px;
-        text-align: center;
-        font-weight: 600;
-        border-radius: 20px 20px 0px 0px;
-        border: 5px solid black;
-      }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="css.css">
 
   </head>
   <body>
@@ -255,32 +37,29 @@
           <a href="https://elchatprospera.online/sf/?sfunnel=18" class="a-btn" style="text-decoration: none;">
             <span class="span-btn">QUERO TER ACESSO AO CHAT LUCRATIVO!</span>
           </a>
-          <img style="width: 100%" src="img/pay.webp">  
-
+          <img style="width: 100%" src="img/pay.webp">
           <img src="img/HL-BTN.webp" style="width: 100%; margin-top: 50px;">
 
-          <div class="videos" style="text-align: center;">
-            <div id="imagem1" onclick="carregarVideo1()">
-              <img src="img/thumb1.png" alt="Imagem" width="280" height="164">
+          <!-- Videos -->
+          <div>
+            <div class="youtube-video-player" data-video-id="_j5EzkLA93I" data-video-thumbnail="hq">
+              <div class="youtube-video-play">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 71.412 50" height="60px" xml:space="preserve"><style id="style3" type="text/css"></style><g id="g5" transform="scale(.58824)"><path id="path7" fill="rgba(0,0,0,0.8)" d="M118.9 13.3c-1.4-5.2-5.5-9.3-10.7-10.7C98.7 0 60.7 0 60.7 0s-38 0-47.5 2.5C8.1 3.9 3.9 8.1 2.5 13.3 0 22.8 0 42.5 0 42.5s0 19.8 2.5 29.2C3.9 76.9 8 81 13.2 82.4 22.8 85 60.7 85 60.7 85s38 0 47.5-2.5c5.2-1.4 9.3-5.5 10.7-10.7 2.5-9.5 2.5-29.2 2.5-29.2s.1-19.8-2.5-29.3z"/><path id="polygon9" fill="#fff" d="M80.2 42.5L48.6 24.3v36.4z"/></g></svg>
+              </div>
             </div>
 
-            <div id="imagem2" onclick="carregarVideo2()">
-              <img src="img/thumb2.png" alt="Imagem" width="280" height="164">
+            <div class="youtube-video-player" data-video-id="NWvtcMn31pQ" data-video-thumbnail="hq">
+              <div class="youtube-video-play">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 71.412 50" height="60px" xml:space="preserve"><style id="style3" type="text/css"></style><g id="g5" transform="scale(.58824)"><path id="path7" fill="rgba(0,0,0,0.8)" d="M118.9 13.3c-1.4-5.2-5.5-9.3-10.7-10.7C98.7 0 60.7 0 60.7 0s-38 0-47.5 2.5C8.1 3.9 3.9 8.1 2.5 13.3 0 22.8 0 42.5 0 42.5s0 19.8 2.5 29.2C3.9 76.9 8 81 13.2 82.4 22.8 85 60.7 85 60.7 85s38 0 47.5-2.5c5.2-1.4 9.3-5.5 10.7-10.7 2.5-9.5 2.5-29.2 2.5-29.2s.1-19.8-2.5-29.3z"/><path id="polygon9" fill="#fff" d="M80.2 42.5L48.6 24.3v36.4z"/></g></svg>
+              </div>
             </div>
 
-            <div id="imagem3" onclick="carregarVideo3()">
-              <img src="img/thumb3.png" alt="Imagem" width="280" height="164">
+            <div class="youtube-video-player" data-video-id="8cw3r6R1LE0" data-video-thumbnail="hq">
+              <div class="youtube-video-play">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" version="1.1" viewBox="0 0 71.412 50" height="60px" xml:space="preserve"><style id="style3" type="text/css"></style><g id="g5" transform="scale(.58824)"><path id="path7" fill="rgba(0,0,0,0.8)" d="M118.9 13.3c-1.4-5.2-5.5-9.3-10.7-10.7C98.7 0 60.7 0 60.7 0s-38 0-47.5 2.5C8.1 3.9 3.9 8.1 2.5 13.3 0 22.8 0 42.5 0 42.5s0 19.8 2.5 29.2C3.9 76.9 8 81 13.2 82.4 22.8 85 60.7 85 60.7 85s38 0 47.5-2.5c5.2-1.4 9.3-5.5 10.7-10.7 2.5-9.5 2.5-29.2 2.5-29.2s.1-19.8-2.5-29.3z"/><path id="polygon9" fill="#fff" d="M80.2 42.5L48.6 24.3v36.4z"/></g></svg>
+              </div>
             </div>
-
           </div>
-
-          <!--       
-            <span><iframe width="280" height="164" src="https://www.youtube.com/embed/_j5EzkLA93I" title="1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
-
-            <span><iframe width="280" height="164" src="https://www.youtube.com/embed/NWvtcMn31pQ" title="2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
-
-            <span><iframe width="280" height="164" src="https://www.youtube.com/embed/8cw3r6R1LE0" title="3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></span>
-          -->
 
           <a href="https://elchatprospera.online/sf/?sfunnel=18" class="a-btn" style="text-decoration: none; margin: 20px 0px;">
             <span class="span-btn">QUERO TER ACESSO AO CHAT LUCRATIVO!</span>
@@ -308,7 +87,7 @@
 
           <div style="text-align: center">
             <h3>Depois de garantir sua vaga, você terá acesso imediato.</h3>
-            <img style="margin-top: 50px;" src="img/garantia.webp">
+            <img style="margin-top: 50px;width: 250px;" src="img/garantia.webp">
             <h2 style="font-size: 50px;font-weight: 800;color: #F29A29;">SELO DE GARANTIA</h2>
             <h4 style="font-size: 20px;">A confiança em meu trabalho é tão grande que você receberá uma garantia de devolução do dinheiro em 30 dias. Se após a compra do Aplicativo você não gostar ou não tiver o resultado esperado neste período, basta enviar um e-mail para a equipe de suporte e a equipe de suporte processará o reembolso de 100% do valor investido.</h4>
             <h1 style="font-weight: 800;color: #F29A29;margin-top: 50px;font-size: 50px;">Por Apenas R$147</h1>
@@ -413,127 +192,6 @@
         </div>   
     </div>
 
-    <script type="text/javascript">
-    //Abrindo popups
-        //Privacidade
-        function openPrivac() {
-            fundoEscuroPriv();
-            document.getElementById("privacidade").style.display = "block";
-        }
-        //Close privacidade
-        function closePrivac() {
-            fundoClaroPriv();
-            document.getElementById("privacidade").style.display = "none";
-        }
-        //Abrindo Termos
-        function openTermos() {
-            fundoEscuroTerm();
-            document.getElementById("termos").style.display = "block";
-        }
-        //Close Termos
-        function closeTermos() {
-            fundoClaroTerm();
-            document.getElementById("termos").style.display = "none";
-        }
-    //-------------------------------------------
-
-    // Deixando o fundo escuro ao abrir os popups.
-        var valuePriv = document.getElementById('privacidade');
-        function fundoEscuroPriv () {
-            valuePriv.classList.add('dim');
-        };
-
-        function fundoClaroPriv (){
-          valuePriv.classList.remove('dim');
-        };
-
-        var valueTerm = document.getElementById('termos');
-        function fundoEscuroTerm () {
-          valueTerm.classList.add('dim');
-        };
-
-        function fundoClaroTerm (){
-          valueTerm.classList.remove('dim');
-        };
-
-    //--------------------------------------
-
-    //Botão Sincronizado
-        
-    //-------------------------------------
-
-    const DELAY_TIME_IN_SECONDS = 100;
-    const DELAY_ELEMENTS_CLASS = 'delay';
-
-     let player;
-    
-    function showElements(className, value) {
-        for (const element of document.getElementsByClassName(className)) {
-            element.style.display = value;
-        }
-    }
-    
-    function showElementsAfterDelay() {
-      const time = Math.floor(player.video.currentTime);
-      if (time >= DELAY_TIME_IN_SECONDS && player.paused == false) {
-        showElements(DELAY_ELEMENTS_CLASS, 'block');
-      }
-    }
-    
-    window.onload = () => {
-        showElements(DELAY_ELEMENTS_CLASS, 'none');
-        const addFunctionShowElementsAfterDelay = setInterval(() => {
-          if (window.smartplayer.instances[0].mounted) {
-            player = window.smartplayer.instances[0];
-            player.events.events.timeupdate.push(showElementsAfterDelay);
-            clearInterval(addFunctionShowElementsAfterDelay);
-
-            
-          }
-        }, 100)
-    }
-
-  </script>
-  <script>
-      function carregarVideo1() {
-      // Defina o ID do vídeo do YouTube que deseja carregar
-      var videoID = "_j5EzkLA93I";
-
-      // Crie o objeto do player do YouTube
-      var player = new YT.Player("imagem1", {
-        height: "164",
-        width: "280",
-        videoId: videoID,
-        playerVars: { 'autoplay': 1 },
-      });
-      }
-
-      function carregarVideo2() {
-      // Defina o ID do vídeo do YouTube que deseja carregar
-      var videoID = "NWvtcMn31pQ";
-
-      // Crie o objeto do player do YouTube
-      var player = new YT.Player("imagem2", {
-        height: "164",
-        width: "280",
-        videoId: videoID,
-        playerVars: { 'autoplay': 1 },
-      });
-      }
-
-      function carregarVideo3() {
-      // Defina o ID do vídeo do YouTube que deseja carregar
-      var videoID = "8cw3r6R1LE0";
-
-      // Crie o objeto do player do YouTube
-      var player = new YT.Player("imagem3", {
-        height: "164",
-        width: "280",
-        videoId: videoID,
-        playerVars: { 'autoplay': 1 },
-      });
-      }
-  </script>
-
+    <script src="main.js"></script>
   </body>
 </html>
