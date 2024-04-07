@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>1,000th visitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+  <div class="div-principal" style="width:100%;text-align: center;max-width: 800px;margin: auto;">
+    <h1 style="font-size: 35px;color: #3298ff;font-family: 'Work Sans', sans-serif;
+    font-weight: 600;margin: 20px 0px;">CONGRATULATIONS!</h1>
+    <p style="font-size: 25px;font-family: 'Work Sans';font-weight: 600;padding: 10px 20px;color: #fff;">You are the 1,000th visitor to this page. Therefore, you will have the chance to guarantee an exclusive discount.</p>
+    <p style="font-size:25px;margin-top:35px;margin-bottom:15px;font-family: 'Work Sans';color: #fff;">Good luck!</p>
+    <div class="roulette">
+      <div class="spinner"></div>
+      <div class="shadow"></div>
+      <div class="markers">
+        <div class="triangle"></div>
+      </div>
+      <div class="button">
+        <span class="span-girar" onclick="spinner.spin(3),setTimeout(setTimeoutFunction, 6000)">SPIN</span>
+      </div>
+    </div>
+  </div>
+  <div class="div-final" style="display: none;position: fixed;margin: auto;background: #00e37d;top: 30%;left:0;right:0;z-index: 100000;text-align: center;margin: auto;border-radius: 20px;border: 2px solid #3fff00;max-width: 500px;">
+
+    <h1 style="font-size: 35px;color: #000;font-family: 'Work Sans', sans-serif;
+    margin: 20px 0px;">INCREDIBLE<br><br>You've won the top prize!<br><br><span style="font-weight: 600;">30% off!!</span></h1>
+    <p style="font-size: 40px;color: #509f53;font-family: 'Work Sans';
+    margin: 20px 0;"><span class="cronometro">4</span>...</p>
+
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone-min.js'></script>
+  <script  src="./script.js"></script>
+
+  <script type="text/javascript">
+
+  function setTimeoutFunction() {
+    // Altera a opacidade da classe div-principal para 0.2
+    document.querySelector('.div-principal').style.opacity = '0.2';
+    
+    // Mostra a classe div-final
+    document.querySelector('.div-final').style.display = 'block';
+    
+    // Oculta a classe span-girar
+    document.querySelector('.span-girar').style.display = 'none';
+
+    cronometro();
+
+    setTimeout(function() {
+      window.location.href = 'https://www.google.com'; //LINK DE CHECKOUT COM DESCONTO
+    }, 4000);
+  }
+
+  </script>
+
+  <script type="text/javascript">
+
+  function cronometro() {
+    var contador = 3;
+    var elementoCronometro = document.querySelector('.cronometro');
+
+    var intervalo = setInterval(function() {
+      elementoCronometro.textContent = contador ;
+      contador--;
+
+      if (contador < 0) {
+        clearInterval(intervalo); // Para o cronômetro após 3 segundos
+      }
+    }, 1000); // Executa a cada segundo
+  }
+
+  </script>
+
+</body>
+</html>
